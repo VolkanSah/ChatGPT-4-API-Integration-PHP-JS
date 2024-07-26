@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple GPT Interface</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Chat with GPT</h1>
+        <div id="chat-output" style="height: 400px; overflow-y: scroll; border: 1px solid #ccc; padding: 10px;"></div>
+        <form id="chat-form">
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" class="form-control" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+            <button type="button" id="clear-chat" class="btn btn-secondary">Clear Chat</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#chat-form').on('submit', function (e) {
+                e.preventDefault();
+                const message = $('#message').val();
+
+                $.ajax({
+                    url: 'process.php',
+                    method: 'POST',
+                    data: { message: message },
+                    success: function (response) {
+                        $('#chat-output').append('<p><strong>You:</strong> ' + message + '</p>');
+                        $('#chat-output').append('<p><strong>GPT:</strong> ' + response + '</p>');
+                        $('#message').val('');
+                        $('#chat-output').scrollTop($('#chat-output')[0].scrollHeight);
+                    }
+                });
+            });
+
+            $('#clear-chat').on('click', function () {
+                $('#chat-output').empty();
+            });
+        });
+    </script>
+</body>
+</html>
