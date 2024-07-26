@@ -1,7 +1,6 @@
-# GPT API Integration (in HTML/CSS with JS/PHP)
+# GPT API Integration (HTML/JS/PHP)
 ###### Updated: 26.07.2024 v2
 
-![Screenshot](chatgpt.png)
 
 > [!IMPORTANT]
 > Please note that this code example is for a basic web application to show "How to do it?", not for production use! 
