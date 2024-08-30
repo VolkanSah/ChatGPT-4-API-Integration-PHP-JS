@@ -70,7 +70,7 @@ You've successfully integrated the GPT API into your PHP website! Now, you can c
 ### Other cool stuff for GPT!
 - [OpenAI Text-to-Speech Interface](https://github.com/VolkanSah/OpenAI-Text-to-Speech-Interface)
 - [ChatGPT ShellMaster (ChatGPT4 Plugin](https://github.com/VolkanSah/GPT-ShellMaster)
-- ['GPT Comment reply' Plugin for WordPress](https://github.com/VolkanSah/GPT-Comments-Reply-WordPress-Plugin)
+- ['GPT Comment reply Plugin v2.0' Plugin for WordPress](https://github.com/VolkanSah/aicc-comments-reply-plugin)
 - [GPT over CLI](https://github.com/VolkanSah/GPT-over-CLI)
 - [GPT-Security-Best-Practices](https://github.com/VolkanSah/GPT-Security-Best-Practices)
 - [OpenAi cost calculator](https://github.com/VolkanSah/OpenAI-Cost-Calculator)
